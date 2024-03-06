@@ -1,20 +1,24 @@
 Test Case #1:
-  Given the user enters a negative, 0, or non-integer
+  Given the user enters a non-integer
   When providing the range or guess
   Then the program will return an error status / message
 Test Case #2:
-  Given the user enters a number > 10000
+  Given the user enters a number <= 0
   When providing the range or guess
   Then the program will return an error status / message
 Test Case #3:
+  Given the user enters a number > 10000
+  When providing the range or guess
+  Then the program will return an error status / message
+Test Case #4:
   Given the user enters a number out of range
   When providing the guess
   Then the program will return an error status / message
-Test Case #4:
+Test Case #5:
   Given the user enters valid numbers and a correct guess
   When providing the range and guess
   Then the program will return a success message
-Test Case #5:
+Test Case #6:
   Given the user enters valid numbers and an incorrect guess
   When providing the range and guess
   Then the program will return a failure message
