@@ -15,4 +15,6 @@ class test_guess_the_number(unittest.TestCase):
   def test_incorrect_guess(self):
     self.assertEqual(guess_the_number(100,5), "womp womp.")#add mock
   
-  
+if __name__ == '__main__':
+    print('Running unit tests')
+    unittest.main()
