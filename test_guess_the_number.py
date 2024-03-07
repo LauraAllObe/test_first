@@ -10,10 +10,14 @@ class test_guess_the_number(unittest.TestCase):
     self.assertEqual(guess_the_number(1000000,1), "Invalid input: must be a number <=10000")
   def test_out_of_range(self):
     self.assertEqual(guess_the_number(100,1000), "Invalid input: the guess must be within the range")
+  @patch('random.randint')
   def test_correct_guess(self):
-    self.assertEqual(guess_the_number(100,5), "CONGRATULATIONS!! YOU GUESSED CORRECT!")#add mock
+    mock_randint.return_value = 5
+    self.assertEqual(guess_the_number(100,5), "CONGRATULATIONS!! YOU GUESSED CORRECT!")
+  @patch('random.randint')
   def test_incorrect_guess(self):
-    self.assertEqual(guess_the_number(100,5), "womp womp.")#add mock
+    mock_randint.return_value = 10
+    self.assertEqual(guess_the_number(100,5), "womp womp.")
   
 if __name__ == '__main__':
     print('Running unit tests')
