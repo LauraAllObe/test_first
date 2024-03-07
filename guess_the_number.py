@@ -1,13 +1,14 @@
 import random
 
-def guess_the_number(guess):
-    range_limit = 10000
-    if not isinstance(guess, int):
-        return "Invalid input: guess must be an integer"
-    if guess < 0 or guess > range_limit:
-        return "Invalid input: the guess must be within the range"
-    if guess != int(guess):
-        return "Invalid input: guess must be a whole number integer"
+def guess_the_number(range_limit, guess):
+    if not isinstance(range_limit, int) or not isinstance(guess, int):
+        return "Invalid input: range and guess must be integers"
+    if range_limit <= 0 or range_limit > 10000:
+        return "Invalid input: range must be a positive integer <= 10000"
+    if guess <= 0:
+        return "Invalid input: guess must be a positive integer"
+    if guess > range_limit:
+        return "Invalid input: guess must be within the range"
     
     number_to_guess = random.randint(1, range_limit)
     
@@ -15,9 +16,6 @@ def guess_the_number(guess):
         return "CONGRATULATIONS!! YOU GUESSED CORRECT!"
     else:
         return "womp womp."
-
-user_guess = int(input("Guess the number between 0 and 10000: "))
-print(guess_the_number(user_guess))
 
 
 
