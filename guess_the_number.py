@@ -6,6 +6,8 @@ def guess_the_number(guess):
         return "Invalid input: guess must be an integer"
     if guess < 0 or guess > range_limit:
         return "Invalid input: the guess must be within the range"
+    if guess != int(guess):
+        return "Invalid input: guess must be a whole number integer"
     
     number_to_guess = random.randint(1, range_limit)
     
@@ -16,6 +18,7 @@ def guess_the_number(guess):
 
 user_guess = int(input("Guess the number between 0 and 10000: "))
 print(guess_the_number(user_guess))
+
 
 
   """
