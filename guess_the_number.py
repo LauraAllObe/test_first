@@ -1,6 +1,17 @@
-import random
+  import random
 
-def guess_the_number(range,guess):
+def guess_the_number(number, guess):
+    if not isinstance(number, int) or not isinstance(guess, int):
+        return "Invalid input: must be an integer"
+    if number <= 0 or guess <= 0:
+        return "Invalid input: must be a positive number"
+    if number > 10000:
+        return "Invalid input: must be a number <=10000"
+    if guess < 1 or guess > number:
+        return "Invalid input: the guess must be within the range"
+    if guess == number:
+        return "CONGRATULATIONS!! YOU GUESSED CORRECT!"
+    return "womp womp."
   """
   please read:
   use random.randint(1, range) for random number please (so the mock in the unit test works)
