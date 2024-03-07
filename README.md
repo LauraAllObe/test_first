@@ -1,8 +1,7 @@
 # Assignment 2 Test First
+SSW 555 / CS 555: Agile Methods for Software Development
 
-__SSW 555 / CS 555: Agile Methods for Software Development__
-
-__Dr. Harun Gultekin__
+Dr. Harun Gultekin
 ##### *Contributors: Jaidyn Sellers, Laura Obermaier, Pavan Kumar Vipparla, (Chao Zheng, & Zhiyao Wen)*
 ## Our User Story:
 As a user of the product, 
