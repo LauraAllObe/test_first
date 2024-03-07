@@ -2,7 +2,7 @@
 SSW 555 / CS 555: Agile Methods for Software Development
 
 Dr. Harun Gultekin
-##### *Contributors: Jaidyn Sellers, Laura Obermaier, Pavan Kumar Vipparla, (Chao Zheng, & Zhiyao Wen)*
+##### *Contributors: Jaidyn Sellers & Laura Obermaier*
 ## Our User Story:
 As a user of the product, 
 
